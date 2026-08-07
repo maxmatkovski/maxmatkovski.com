@@ -13,7 +13,8 @@ Last updated: 2026-08-07 (Asia/Jerusalem)
 
 ## Latest deployment
 
-- Latest published commit at time of handoff: `afd2c4635c7a398af34e6b719dc9cf0ab3e26bf0`
+- Latest website commit: `afd2c4635c7a398af34e6b719dc9cf0ab3e26bf0`
+- Latest repository commit after adding context files: `150bc2e`
 - GitHub Pages build status: `built`
 - Build completed successfully with no reported error
 
@@ -52,7 +53,12 @@ This is why refreshing the site on that Mac still shows the old GoDaddy page whi
 
 - GitHub Pages currently reports `https_enforced: false`.
 - An attempt to enable HTTPS returned: `The certificate does not exist yet`.
+- Chrome currently shows `NET::ERR_CERT_COMMON_NAME_INVALID` when opening `https://maxmatkovski.com` because GitHub has not issued a certificate containing the custom domain yet.
+- This warning is expected during certificate provisioning. Do not bypass the warning.
 - GitHub must finish provisioning the TLS certificate after DNS propagation before HTTPS can be enforced.
+- DNS has been checked for common certificate blockers: there are no conflicting `AAAA` or `CAA` records, and `www` resolves to `maxmatkovski.github.io`.
+- Typical provisioning takes several minutes to a few hours. Allow up to 24 hours before treating it as a deployment problem.
+- Do not change the correct DNS records while certificate provisioning is pending, because doing so may delay or restart validation.
 
 Retry later with:
 

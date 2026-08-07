@@ -60,3 +60,7 @@ git diff --check
 ```
 
 Then commit and push `main`. GitHub Pages deploys from the repository root.
+
+## Current operational note
+
+The site is deployed and its public DNS records point to GitHub Pages. HTTPS certificate provisioning is still pending as of 2026-08-07, so Chrome may show `NET::ERR_CERT_COMMON_NAME_INVALID`. This is a temporary certificate mismatch, not a content or build failure. Do not change DNS while waiting; retry HTTPS enforcement after GitHub issues the certificate. See `DEPLOYMENT_HANDOFF.md` for the exact records and commands.
