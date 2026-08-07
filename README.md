@@ -14,7 +14,6 @@ Then open `http://localhost:8000`.
 
 The core positioning and biography are populated. Before launch, update:
 
-- `max@maxmatkovski.com` if you use a different domain mailbox
 - Selected work with named projects when they are ready to share
 - Notes with links as articles are published
 
