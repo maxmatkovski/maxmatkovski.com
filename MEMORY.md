@@ -16,7 +16,7 @@ The site should feel credible to engineers, startup founders, investors, and oth
 - Born in Tel Aviv and raised in California
 - Works in AI/ML engineering at an early-stage startup
 - B.S. in Computer Science and Cognitive Science from UCLA
-- Elective business coursework at UCLA Anderson School of Management, including accounting, venture capital, taxation, financial analysis, and real estate investment
+- Took elective courses at UCLA Anderson School of Management
 - M.S. in Computer Science from Georgia Tech, focused on AI and machine learning
 - Experience spans applied AI, ML, search, retrieval, embeddings, speech recognition, mobility, data engineering, software engineering, and product
 - Interested in applied AI, LLMs, agents, search, retrieval, embeddings, AI infrastructure, computer vision, data/ML engineering, early-stage technology, product, and business
@@ -49,7 +49,7 @@ The site should feel credible to engineers, startup founders, investors, and oth
 - Article pages: `articles/*.html`
 - Locally hosted article images: `assets/articles/`
 - Styles: `styles.css`
-- JavaScript only sets the current footer year: `script.js`
+- JavaScript sets the current footer year and updates the live Tel Aviv, New York, and San Francisco clocks: `script.js`
 - SEO/supporting assets: `favicon.svg`, `robots.txt`, and `sitemap.xml`
 - Sharing/brand assets: `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`, and `assets/social-card.png` (with editable source at `assets/social-card.svg`)
 
