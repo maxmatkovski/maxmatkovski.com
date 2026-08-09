@@ -44,12 +44,13 @@ The site should feel credible to engineers, startup founders, investors, and oth
 - Static HTML, CSS, and JavaScript
 - No framework, package manager, build command, or runtime dependencies
 - Entry point: `index.html`
-- Writings index: `writings.html`
+- Writings index: `writings/index.html` (published at `/writings`)
 - Article pages: `articles/*.html`
 - Locally hosted article images: `assets/articles/`
 - Styles: `styles.css`
 - JavaScript only sets the current footer year: `script.js`
 - SEO/supporting assets: `favicon.svg`, `robots.txt`, and `sitemap.xml`
+- Sharing/brand assets: `favicon-32.png`, `apple-touch-icon.png`, and `assets/social-card.png` (with editable source at `assets/social-card.svg`)
 
 ## Content policy
 
@@ -66,7 +67,7 @@ Five articles were migrated in full from Max's Medium feed on 2026-08-09. Their 
 - Natural Language Processing of 100,000 Climate Change Tweets
 - Predicting Water Potability Using Machine Learning
 
-The articles are listed under Writings in `index.html`, collected on `writings.html`, and included in `sitemap.xml`.
+The articles are listed under Writings in `index.html`, collected at `/writings`, and included in `sitemap.xml`.
 
 ## Updating the site
 
