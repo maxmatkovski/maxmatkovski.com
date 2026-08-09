@@ -20,17 +20,14 @@ nav a:hover, footer a:hover { color: var(--link); }
 nav a[aria-current="page"] { color: var(--ink); }
 
 main > section { padding: 76px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 25px; }
-.intro { display: grid; grid-template-columns: 168px 1fr; gap: 52px; align-items: start; padding-top: 90px; }
-.intro img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 38%; border-radius: 50%; }
-.world-clock { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin: 0 0 17px; color: var(--muted); font-size: 12px; }
-.clock-item { display: inline-flex; align-items: center; gap: 7px; min-height: 30px; padding: 4px 10px; border: 1px solid rgba(23, 23, 23, .1); border-radius: 999px; background: rgba(255, 255, 255, .28); box-shadow: 0 1px 0 rgba(255, 255, 255, .45) inset; white-space: nowrap; }
-.clock-item:first-child::before { width: 6px; height: 6px; border-radius: 50%; background: #d94f2b; box-shadow: 0 0 0 3px rgba(217, 79, 43, .13); content: ""; animation: clock-pulse 2.4s ease-in-out infinite; }
-.clock-item span { color: var(--ink); font-weight: 500; }
-.clock-item time { min-width: 36px; color: var(--ink); font: 500 12px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
-.clock-secondary { gap: 6px; }
-.clock-secondary .clock-location { color: var(--muted); font-weight: 400; }
-.clock-secondary .clock-location time { margin-left: 3px; }
-@keyframes clock-pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+.intro { display: grid; grid-template-columns: 168px 1fr; grid-template-areas: "photo clock" "photo copy"; column-gap: 52px; row-gap: 0; align-items: start; padding-top: 90px; }
+.intro img { grid-area: photo; display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 38%; border-radius: 50%; }
+.intro-copy { grid-area: copy; }
+.world-clock { grid-area: clock; display: grid; grid-template-columns: repeat(3, max-content); gap: 30px; margin: 0 0 20px; padding-block: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.clock-city { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+.clock-name { color: var(--muted); font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+.clock-city time { color: var(--muted); font: 500 15px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-variant-numeric: tabular-nums; letter-spacing: .01em; white-space: nowrap; }
+.clock-current .clock-name, .clock-current time { color: #8f4f22; }
 h1 { margin: 0 0 17px; font-size: clamp(38px, 6vw, 58px); line-height: 1.08; letter-spacing: -.05em; font-weight: 600; }
 .lead { margin: 0 0 18px; color: var(--ink); font-size: 21px; line-height: 1.45; }
 .intro p:not(.location):not(.lead) { margin: 0; color: var(--muted); }
@@ -94,7 +91,7 @@ main > .writings-page { display: block; max-width: 720px; margin-inline: auto; p
   nav { width: 100%; display: flex; justify-content: center; gap: clamp(12px, 5vw, 24px); padding-block: 8px; font-size: 13px; white-space: nowrap; }
   nav a { min-height: 24px; }
   main > section { padding: 58px 0; }
-  .intro { grid-template-columns: 120px 1fr; gap: 26px; padding-top: 52px; }
+  .intro { grid-template-columns: 120px 1fr; column-gap: 26px; padding-top: 52px; }
   .world-clock { margin-bottom: 10px; }
   h1 { font-size: 38px; }
   .lead { font-size: 18px; }
@@ -107,10 +104,12 @@ main > .writings-page { display: block; max-width: 720px; margin-inline: auto; p
 
 @media (max-width: 480px) {
   .site-header, main, footer { width: min(100% - 28px, 900px); }
-  .intro { grid-template-columns: 1fr; gap: 30px; padding-top: 42px; }
+  .intro { grid-template-columns: 1fr; grid-template-areas: "clock" "photo" "copy"; gap: 30px; padding-top: 30px; }
   .intro img { width: min(42vw, 150px); max-width: 100%; height: auto; aspect-ratio: 1 / 1; }
   .site-name { font-size: 14px; }
-  .world-clock { font-size: 11px; }
+  .world-clock { width: 100%; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 0; padding-block: 14px; }
+  .clock-name { font-size: 9px; letter-spacing: .1em; }
+  .clock-city time { font-size: clamp(11px, 3.5vw, 15px); letter-spacing: 0; }
   h1 { font-size: clamp(36px, 11vw, 46px); }
   .intro-links a { display: inline-flex; min-height: 44px; align-items: center; }
   .education-list article { grid-template-columns: 82px 1fr; gap: 18px; }
@@ -127,4 +126,4 @@ main > .writings-page { display: block; max-width: 720px; margin-inline: auto; p
   .article-figure { margin-block: 30px; }
 }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .clock-item:first-child::before { animation: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

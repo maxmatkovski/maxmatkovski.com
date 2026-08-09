@@ -11,11 +11,12 @@ function updateWorldClock() {
     if (!clockFormatters.has(timeZone)) {
       clockFormatters.set(
         timeZone,
-        new Intl.DateTimeFormat("en-GB", {
+        new Intl.DateTimeFormat("en-US", {
           timeZone,
           hour: "2-digit",
           minute: "2-digit",
-          hour12: false,
+          second: "2-digit",
+          hour12: true,
         }),
       );
     }

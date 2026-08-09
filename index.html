@@ -38,20 +38,22 @@
 
     <main id="top">
       <section class="intro" aria-labelledby="intro-title">
-        <img src="headshot.jpg" alt="Max Matkovski" width="800" height="800" fetchpriority="high" decoding="async" />
-        <div>
-          <div class="world-clock" aria-label="Current local times">
-            <div class="clock-item">
-              <span>Currently based in Tel Aviv</span>
-              <time data-time-zone="Asia/Jerusalem">Local time</time>
-            </div>
-            <div class="clock-item clock-secondary">
-              <span>Sometimes in</span>
-              <span class="clock-location">New York <time data-time-zone="America/New_York">Local time</time></span>
-              <span aria-hidden="true">/</span>
-              <span class="clock-location">San Francisco <time data-time-zone="America/Los_Angeles">Local time</time></span>
-            </div>
+        <div class="world-clock" aria-label="Current local times">
+          <div class="clock-city clock-current">
+            <span class="clock-name">Tel Aviv</span>
+            <time data-time-zone="Asia/Jerusalem">Local time</time>
           </div>
+          <div class="clock-city">
+            <span class="clock-name">New York</span>
+            <time data-time-zone="America/New_York">Local time</time>
+          </div>
+          <div class="clock-city">
+            <span class="clock-name">San Francisco</span>
+            <time data-time-zone="America/Los_Angeles">Local time</time>
+          </div>
+        </div>
+        <img src="headshot.jpg" alt="Max Matkovski" width="800" height="800" fetchpriority="high" decoding="async" />
+        <div class="intro-copy">
           <h1 id="intro-title">Hi, I’m Max.</h1>
           <p class="lead">
             I’m an AI/ML engineer who combines deep technical work with strong
@@ -196,6 +198,6 @@
         <a href="https://github.com/maxmatkovski" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </footer>
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>
