@@ -5,4 +5,19 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://maxmatkovski.com/articles/from-cyber-nation-to-ai-nation.html</loc>
+  </url>
+  <url>
+    <loc>https://maxmatkovski.com/articles/building-a-language-model-from-scratch-with-numpy.html</loc>
+  </url>
+  <url>
+    <loc>https://maxmatkovski.com/articles/ai-phishing-detector-with-claude-and-mcp.html</loc>
+  </url>
+  <url>
+    <loc>https://maxmatkovski.com/articles/nlp-of-100000-climate-change-tweets.html</loc>
+  </url>
+  <url>
+    <loc>https://maxmatkovski.com/articles/predicting-water-potability-with-machine-learning.html</loc>
+  </url>
 </urlset>

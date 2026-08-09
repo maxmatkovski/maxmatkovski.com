@@ -39,6 +39,7 @@ h2 { margin: 1px 0 0; font-size: 17px; font-weight: 600; letter-spacing: -.015em
 .entries article { padding: 25px 0 27px; border-bottom: 1px solid var(--line); }
 .entries article:last-child { border-bottom: 0; padding-bottom: 0; }
 .entries h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.5; font-weight: 600; }
+.entries h3 a:hover { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
 .entries h3 span { color: var(--muted); font-weight: 400; }
 .entries p { margin: 0; color: var(--muted); }
 .entries.compact article { padding-block: 19px; }
@@ -46,6 +47,30 @@ h2 { margin: 1px 0 0; font-size: 17px; font-weight: 600; letter-spacing: -.015em
 
 footer { min-height: 100px; display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 13px; }
 footer div { display: flex; gap: 20px; }
+
+.article-header, .article-body { width: min(100% - 40px, 720px); margin-inline: auto; }
+.article-header { padding: 78px 0 42px; }
+.article-header .back-link { display: inline-block; margin-bottom: 42px; color: var(--link); font-size: 14px; }
+.article-header .back-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.article-header h1 { max-width: 700px; font-size: clamp(38px, 7vw, 62px); }
+.article-meta { margin: 0; color: var(--muted); font-size: 14px; }
+.article-hero { display: block; width: 100%; height: auto; margin: 0 0 52px; border-radius: 3px; }
+.article-body { padding-bottom: 84px; font-size: 18px; line-height: 1.75; }
+.article-body p { margin: 0 0 26px; }
+.article-body h2 { margin: 52px 0 18px; font-size: 25px; line-height: 1.3; }
+.article-body h3 { margin: 32px 0 10px; font-size: 19px; }
+.article-body h4 { margin: 28px 0 10px; font-size: 17px; }
+.article-body ul { margin: 0 0 28px; padding-left: 24px; }
+.article-body ol { margin: 0 0 28px; padding-left: 24px; }
+.article-body li { margin-bottom: 12px; }
+.article-body a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+.article-figure { margin: 42px 0; }
+.article-figure img { display: block; width: auto; max-width: 100%; height: auto; margin-inline: auto; border-radius: 3px; }
+.article-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; text-align: center; }
+.article-body blockquote { margin: 32px 0; padding-left: 22px; border-left: 3px solid var(--line); color: var(--muted); }
+.article-code { max-width: 100%; margin: 28px 0; padding: 18px 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: 3px; background: #f7f7f5; font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; white-space: pre; }
+.article-video { position: relative; width: 100%; margin: 38px 0; padding-top: 56.25%; }
+.article-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 @media (max-width: 700px) {
   .site-header, main, footer { width: min(100% - 32px, 900px); }
@@ -70,6 +95,11 @@ footer div { display: flex; gap: 20px; }
   h1 { font-size: clamp(36px, 11vw, 46px); }
   .intro-links a { display: inline-flex; min-height: 44px; align-items: center; }
   footer { padding-bottom: env(safe-area-inset-bottom); }
+  .article-header, .article-body { width: min(100% - 28px, 720px); }
+  .article-header { padding-top: 46px; }
+  .article-header .back-link { margin-bottom: 30px; }
+  .article-hero { margin-bottom: 36px; }
+  .article-body { font-size: 17px; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
