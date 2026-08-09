@@ -1,6 +1,6 @@
 # Deployment Handoff
 
-Last updated: 2026-08-07 (Asia/Jerusalem)
+Last updated: 2026-08-09 (Asia/Jerusalem)
 
 ## Hosting
 
@@ -13,10 +13,11 @@ Last updated: 2026-08-07 (Asia/Jerusalem)
 
 ## Latest deployment
 
-- Latest website commit: `afd2c4635c7a398af34e6b719dc9cf0ab3e26bf0`
-- Latest repository commit after adding context files: `150bc2e`
-- GitHub Pages build status: `built`
-- Build completed successfully with no reported error
+- Latest website commit: `9705f67` (`Publish five migrated Medium articles`)
+- Five article pages and 54 locally hosted article images were added
+- The homepage Notes section and `sitemap.xml` link all five articles
+- The preceding UI commits made the headshot a small proportional circle and obfuscated the public email address
+- The intended contact text is `maxmatkovski [at] gmail [dot] com`; there should be no raw personal email or `mailto:` link in the site source
 
 ## DNS configuration
 
@@ -37,36 +38,21 @@ The configured records are:
 
 Do not change the GoDaddy nameserver, SOA, `_domainconnect`, `pay`, or email/DMARC records as part of the website deployment.
 
-## Current propagation state
+## DNS state
 
-At the time of this handoff:
-
-- GoDaddy's authoritative nameserver returns all four correct GitHub Pages IP addresses.
-- Cloudflare DNS (`1.1.1.1`) returns all four correct GitHub Pages IP addresses.
-- The Mac's current default DNS resolver still returns the old GoDaddy Website Builder addresses:
-  - `76.223.105.230`
-  - `13.248.243.5`
-
-This is why refreshing the site on that Mac still shows the old GoDaddy page while an iPhone or another network may show the new site. A browser refresh does not clear the operating system or router DNS cache.
+- GoDaddy's authoritative nameserver and public resolvers return the four GitHub Pages IP addresses listed above.
+- Do not change the correct DNS records to troubleshoot a stale page.
+- GitHub Pages updates commonly take a few minutes to appear. Use the regular URL `https://maxmatkovski.com`; a temporary query string such as `?v=<commit>` is only a cache-busting diagnostic and is not part of the site's address.
 
 ## HTTPS state
 
-- GitHub Pages currently reports `https_enforced: false`.
-- An attempt to enable HTTPS returned: `The certificate does not exist yet`.
-- Chrome currently shows `NET::ERR_CERT_COMMON_NAME_INVALID` when opening `https://maxmatkovski.com` because GitHub has not issued a certificate containing the custom domain yet.
-- This warning is expected during certificate provisioning. Do not bypass the warning.
-- GitHub must finish provisioning the TLS certificate after DNS propagation before HTTPS can be enforced.
-- DNS has been checked for common certificate blockers: there are no conflicting `AAAA` or `CAA` records, and `www` resolves to `maxmatkovski.github.io`.
-- Typical provisioning takes several minutes to a few hours. Allow up to 24 hours before treating it as a deployment problem.
-- Do not change the correct DNS records while certificate provisioning is pending, because doing so may delay or restart validation.
+- HTTPS was repaired on 2026-08-09 by clearing and restoring the GitHub Pages custom domain, which restarted stalled certificate provisioning.
+- GitHub Pages now reports `https_enforced: true` and the site status is `built`.
+- The active Let's Encrypt certificate covers both `maxmatkovski.com` and `www.maxmatkovski.com`.
+- The certificate issued on 2026-08-09 expires on 2026-11-07 and should renew automatically through GitHub Pages.
+- DNS has no conflicting `AAAA` or `CAA` records, and `www` resolves to `maxmatkovski.github.io`.
 
-Retry later with:
-
-```sh
-gh api --method PUT repos/maxmatkovski/maxmatkovski.com/pages -F https_enforced=true
-```
-
-Then verify:
+Verify with:
 
 ```sh
 gh api repos/maxmatkovski/maxmatkovski.com/pages --jq '{status:.status,cname:.cname,https_enforced:.https_enforced}'
@@ -83,3 +69,12 @@ sudo killall -HUP mDNSResponder
 ```
 
 Reconnect Wi-Fi and reopen the browser. If the resolver remains stale, enable Secure DNS with Cloudflare in Chrome or temporarily use another network. Avoid repeatedly changing the correct GoDaddy records.
+
+## Working tree handoff
+
+After this handoff update is committed, `main` should match `origin/main` with a clean working tree. Validate future changes with:
+
+```sh
+node --check script.js
+git diff --check
+```
