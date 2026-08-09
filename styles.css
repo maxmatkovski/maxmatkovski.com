@@ -26,8 +26,8 @@ h1 { margin: 0 0 17px; font-size: clamp(38px, 6vw, 58px); line-height: 1.08; let
 .lead { margin: 0 0 18px; color: var(--ink); font-size: 21px; line-height: 1.45; }
 .intro p:not(.location):not(.lead) { margin: 0; color: var(--muted); }
 .intro-links { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 27px; font-size: 14px; }
-.intro-links a, .email { color: var(--link); }
-.intro-links a:hover, .email:hover { text-decoration: underline; text-underline-offset: 3px; }
+.intro-links a { color: var(--link); }
+.intro-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 main > section:not(.intro) { display: grid; grid-template-columns: 190px 1fr; gap: 44px; }
 h2 { margin: 1px 0 0; font-size: 17px; font-weight: 600; letter-spacing: -.015em; }
