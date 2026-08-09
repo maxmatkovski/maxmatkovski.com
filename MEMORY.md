@@ -12,7 +12,7 @@ The site should feel credible to engineers, startup founders, investors, and oth
 
 ## Personal context
 
-- Based in Tel Aviv, Israel
+- Based in Tel Aviv, Israel, having previously spent time in San Francisco and New York
 - Born in Tel Aviv and raised in California
 - Works in AI/ML engineering at an early-stage startup
 - B.S. in Computer Science and Cognitive Science from UCLA
@@ -71,6 +71,8 @@ Five articles were migrated in full from Max's Medium feed on 2026-08-09. Their 
 The articles are listed under Writings in `index.html`, collected at `/writings`, and included in `sitemap.xml`.
 
 ## Updating the site
+
+Possible future improvements and the proposed Projects/Writings separation are tracked in `FUTURE_PLANS.md`.
 
 After editing, run:
 
