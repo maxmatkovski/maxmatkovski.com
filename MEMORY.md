@@ -15,7 +15,8 @@ The site should feel credible to engineers, startup founders, investors, and oth
 - Based in Tel Aviv, Israel
 - Born in Tel Aviv and raised in California
 - Works in AI/ML engineering at an early-stage startup
-- Studied computer science and business at UCLA
+- B.S. in Computer Science and Cognitive Science from UCLA
+- Elective business coursework at UCLA Anderson School of Management, including accounting, venture capital, taxation, financial analysis, and real estate investment
 - M.S. in Computer Science from Georgia Tech, focused on AI and machine learning
 - Experience spans applied AI, ML, search, retrieval, embeddings, speech recognition, mobility, data engineering, software engineering, and product
 - Interested in applied AI, LLMs, agents, search, retrieval, embeddings, AI infrastructure, computer vision, data/ML engineering, early-stage technology, product, and business
