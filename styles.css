@@ -23,7 +23,7 @@ main > section { padding: 76px 0; border-bottom: 1px solid var(--line); scroll-m
 .intro { display: grid; grid-template-columns: 168px 1fr; grid-template-areas: "photo clock" "photo copy"; column-gap: 52px; row-gap: 0; align-items: start; padding-top: 90px; }
 .intro img { grid-area: photo; display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 38%; border-radius: 50%; }
 .intro-copy { grid-area: copy; }
-.world-clock { grid-area: clock; display: grid; grid-template-columns: repeat(3, max-content); gap: 30px; margin: 0 0 20px; padding-block: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.world-clock { grid-area: clock; display: grid; grid-template-columns: repeat(3, max-content); gap: 30px; margin: 0 0 20px; padding-block: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 5px, rgba(23, 23, 23, .025) 6px); }
 .clock-city { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
 .clock-name { color: var(--muted); font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
 .clock-city time { color: var(--muted); font: 500 15px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-variant-numeric: tabular-nums; letter-spacing: .01em; white-space: nowrap; }
@@ -105,11 +105,11 @@ main > .writings-page { display: block; max-width: 720px; margin-inline: auto; p
 @media (max-width: 480px) {
   .site-header, main, footer { width: min(100% - 28px, 900px); }
   .intro { grid-template-columns: 1fr; grid-template-areas: "clock" "photo" "copy"; gap: 30px; padding-top: 30px; }
-  .intro img { width: min(42vw, 150px); max-width: 100%; height: auto; aspect-ratio: 1 / 1; }
+  .intro img { width: min(31vw, 118px); max-width: 100%; height: auto; aspect-ratio: 1 / 1; }
   .site-name { font-size: 14px; }
   .world-clock { width: 100%; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 0; padding-block: 14px; }
-  .clock-name { font-size: 9px; letter-spacing: .1em; }
-  .clock-city time { font-size: clamp(11px, 3.5vw, 15px); letter-spacing: 0; }
+  .clock-name { font-size: 10px; letter-spacing: .14em; }
+  .clock-city time { font-size: clamp(13px, 4vw, 17px); letter-spacing: .01em; }
   h1 { font-size: clamp(36px, 11vw, 46px); }
   .intro-links a { display: inline-flex; min-height: 44px; align-items: center; }
   .education-list article { grid-template-columns: 82px 1fr; gap: 18px; }
