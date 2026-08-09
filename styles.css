@@ -22,10 +22,15 @@ nav a[aria-current="page"] { color: var(--ink); }
 main > section { padding: 76px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 25px; }
 .intro { display: grid; grid-template-columns: 168px 1fr; gap: 52px; align-items: start; padding-top: 90px; }
 .intro img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 38%; border-radius: 50%; }
-.world-clock { display: flex; flex-wrap: wrap; gap: 7px 18px; margin: 0 0 14px; color: var(--muted); font-size: 12px; }
-.clock-item { display: inline-flex; gap: 7px; white-space: nowrap; }
+.world-clock { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin: 0 0 17px; color: var(--muted); font-size: 12px; }
+.clock-item { display: inline-flex; align-items: center; gap: 7px; min-height: 30px; padding: 4px 10px; border: 1px solid rgba(23, 23, 23, .1); border-radius: 999px; background: rgba(255, 255, 255, .28); box-shadow: 0 1px 0 rgba(255, 255, 255, .45) inset; white-space: nowrap; }
+.clock-item:first-child::before { width: 6px; height: 6px; border-radius: 50%; background: #d94f2b; box-shadow: 0 0 0 3px rgba(217, 79, 43, .13); content: ""; animation: clock-pulse 2.4s ease-in-out infinite; }
 .clock-item span { color: var(--ink); font-weight: 500; }
-.clock-item time { min-width: 53px; font-variant-numeric: tabular-nums; }
+.clock-item time { min-width: 36px; color: var(--ink); font: 500 12px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+.clock-secondary { gap: 6px; }
+.clock-secondary .clock-location { color: var(--muted); font-weight: 400; }
+.clock-secondary .clock-location time { margin-left: 3px; }
+@keyframes clock-pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
 h1 { margin: 0 0 17px; font-size: clamp(38px, 6vw, 58px); line-height: 1.08; letter-spacing: -.05em; font-weight: 600; }
 .lead { margin: 0 0 18px; color: var(--ink); font-size: 21px; line-height: 1.45; }
 .intro p:not(.location):not(.lead) { margin: 0; color: var(--muted); }
@@ -105,6 +110,7 @@ main > .writings-page { display: block; max-width: 720px; margin-inline: auto; p
   .intro { grid-template-columns: 1fr; gap: 30px; padding-top: 42px; }
   .intro img { width: min(42vw, 150px); max-width: 100%; height: auto; aspect-ratio: 1 / 1; }
   .site-name { font-size: 14px; }
+  .world-clock { font-size: 11px; }
   h1 { font-size: clamp(36px, 11vw, 46px); }
   .intro-links a { display: inline-flex; min-height: 44px; align-items: center; }
   .education-list article { grid-template-columns: 82px 1fr; gap: 18px; }
@@ -121,4 +127,4 @@ main > .writings-page { display: block; max-width: 720px; margin-inline: auto; p
   .article-figure { margin-block: 30px; }
 }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .clock-item:first-child::before { animation: none; } }
