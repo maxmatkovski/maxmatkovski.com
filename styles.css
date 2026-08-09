@@ -58,7 +58,7 @@ footer div { display: flex; gap: 20px; }
 .article-header h1 { max-width: 700px; font-size: clamp(38px, 7vw, 62px); }
 .article-meta { margin: 0; color: var(--muted); font-size: 14px; }
 .article-hero { display: block; width: 100%; height: auto; margin: 0 0 52px; border-radius: 3px; }
-.article-body { padding-bottom: 84px; font-size: 18px; line-height: 1.75; }
+.article-body { min-width: 0; padding-bottom: 84px; font-size: 18px; line-height: 1.75; overflow-wrap: break-word; }
 .article-body p { margin: 0 0 26px; }
 .article-body h2 { margin: 52px 0 18px; font-size: 25px; line-height: 1.3; }
 .article-body h3 { margin: 32px 0 10px; font-size: 19px; }
@@ -67,8 +67,8 @@ footer div { display: flex; gap: 20px; }
 .article-body ol { margin: 0 0 28px; padding-left: 24px; }
 .article-body li { margin-bottom: 12px; }
 .article-body a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
-.article-figure { margin: 42px 0; }
-.article-figure img { display: block; width: auto; max-width: 100%; height: auto; margin-inline: auto; border-radius: 3px; }
+.article-figure { width: 100%; max-width: 100%; margin: 42px 0; overflow: hidden; }
+.article-figure img { display: block; width: 100%; max-width: 100%; height: auto; margin-inline: auto; object-fit: contain; border-radius: 3px; }
 .article-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; text-align: center; }
 .article-body blockquote { margin: 32px 0; padding-left: 22px; border-left: 3px solid var(--line); color: var(--muted); }
 .article-code { max-width: 100%; margin: 28px 0; padding: 18px 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: 3px; background: #f7f7f5; font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; white-space: pre; }
@@ -106,6 +106,7 @@ footer div { display: flex; gap: 20px; }
   .article-header .back-link { margin-bottom: 30px; }
   .article-hero { margin-bottom: 36px; }
   .article-body { font-size: 17px; }
+  .article-figure { margin-block: 30px; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
