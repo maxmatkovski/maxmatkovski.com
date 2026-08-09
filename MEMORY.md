@@ -15,7 +15,7 @@ The site should feel credible to engineers, startup founders, investors, and oth
 - Based in Tel Aviv, Israel
 - Born in Tel Aviv and raised in California
 - Works in AI/ML engineering at an early-stage startup
-- B.S. in Computer Science and Cognitive Science from UCLA
+- Studied computer science and business at UCLA
 - M.S. in Computer Science from Georgia Tech, focused on AI and machine learning
 - Experience spans applied AI, ML, search, retrieval, embeddings, speech recognition, mobility, data engineering, software engineering, and product
 - Interested in applied AI, LLMs, agents, search, retrieval, embeddings, AI infrastructure, computer vision, data/ML engineering, early-stage technology, product, and business
@@ -54,17 +54,18 @@ The site should feel credible to engineers, startup founders, investors, and oth
 
 Do not invent employer names, job titles, dates, projects, metrics, or technical achievements. Add named experience only when Max supplies the information and confirms it is public.
 
-## Published notes
+## Published writings
 
-Five articles were migrated in full from Max's Medium feed on 2026-08-09. Their original publication dates, text, headings, links, captions, code, and images were preserved. All 54 article images are hosted locally rather than hot-linked from Medium.
+Five articles were migrated in full from Max's Medium feed on 2026-08-09. Their original publication dates, text, headings, links, captions, code, and images were preserved. A sixth article was published from a local Markdown draft on the same date. All 55 article images are hosted locally rather than hot-linked from external sites.
 
+- Open Weights Are Good for Business—and Awkward for the AI Labs
 - From Cyber Nation to AI Nation: Can Israel Reinvent Its Brand?
 - Building a Language Model From Scratch With Nothing But NumPy
 - Phishing Detector — Autonomous Agent via Claude 4 and MCP
 - Natural Language Processing of 100,000 Climate Change Tweets
 - Predicting Water Potability Using Machine Learning
 
-The articles are listed under Notes in `index.html` and included in `sitemap.xml`.
+The articles are listed under Writings in `index.html` and included in `sitemap.xml`.
 
 ## Updating the site
 
