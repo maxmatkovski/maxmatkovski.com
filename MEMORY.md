@@ -50,7 +50,7 @@ The site should feel credible to engineers, startup founders, investors, and oth
 - Styles: `styles.css`
 - JavaScript only sets the current footer year: `script.js`
 - SEO/supporting assets: `favicon.svg`, `robots.txt`, and `sitemap.xml`
-- Sharing/brand assets: `favicon-32.png`, `apple-touch-icon.png`, and `assets/social-card.png` (with editable source at `assets/social-card.svg`)
+- Sharing/brand assets: `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`, and `assets/social-card.png` (with editable source at `assets/social-card.svg`)
 
 ## Content policy
 
