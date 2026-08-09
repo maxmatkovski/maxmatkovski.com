@@ -13,10 +13,13 @@ Last updated: 2026-08-09 (Asia/Jerusalem)
 
 ## Latest deployment
 
-- Latest website commit: `9705f67` (`Publish five migrated Medium articles`)
-- Five article pages and 54 locally hosted article images were added
-- The homepage Notes section and `sitemap.xml` link all five articles
-- The preceding UI commits made the headshot a small proportional circle and obfuscated the public email address
+- Latest website commit before this handoff refresh: `4f08557` (`Document future site plans and location context`)
+- The homepage positions Max as a customer-oriented AI/ML engineer based in Tel Aviv, having previously spent time in San Francisco and New York
+- The homepage includes a compact live clock for Tel Aviv, New York, and San Francisco; Tel Aviv is visually emphasized as the current location
+- Six articles are published under Writings at `/writings`, with article images hosted locally
+- The homepage includes a compact Writings selection, while the full archive lives on the separate Writings page
+- `FUTURE_PLANS.md` records the proposed separation between future Projects and Writings areas; a Projects page has not yet been created
+- The headshot is a small proportional circle, and the public email address is intentionally obfuscated
 - The intended contact text is `maxmatkovski [at] gmail [dot] com`; there should be no raw personal email or `mailto:` link in the site source
 
 ## DNS configuration
