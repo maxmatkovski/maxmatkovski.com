@@ -46,7 +46,7 @@ h2 { margin: 1px 0 0; font-size: 17px; font-weight: 600; letter-spacing: -.015em
 .compact h3 { margin-bottom: 2px; }
 main > section.education-section { grid-template-columns: 1fr; gap: 26px; }
 .education-list article { display: grid; grid-template-columns: 125px 1fr; gap: 26px; align-items: center; }
-.school-logo { display: block; width: 100%; height: 38px; object-fit: contain; object-position: left center; }
+.school-logo { display: block; width: auto; max-width: 100%; height: auto; max-height: 38px; object-fit: contain; object-position: left center; }
 .ucla-logo { width: 98px; }
 
 footer { min-height: 100px; display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 13px; }
@@ -68,12 +68,12 @@ footer div { display: flex; gap: 20px; }
 .article-body ol { margin: 0 0 28px; padding-left: 24px; }
 .article-body li { margin-bottom: 12px; }
 .article-body a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
-.article-figure { width: 100%; max-width: 100%; margin: 42px 0; overflow: hidden; }
-.article-figure img { display: block; width: 100%; max-width: 100%; height: auto; margin-inline: auto; object-fit: contain; border-radius: 3px; }
+.article-figure { width: 100%; max-width: 100%; margin: 42px 0; }
+.article-figure img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: auto; margin-inline: auto; object-fit: contain; border-radius: 3px; }
 .article-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; text-align: center; }
 .article-body blockquote { margin: 32px 0; padding-left: 22px; border-left: 3px solid var(--line); color: var(--muted); }
 .article-code { max-width: 100%; margin: 28px 0; padding: 18px 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: 3px; background: #f7f7f5; font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; white-space: pre; }
-.article-video { position: relative; width: 100%; margin: 38px 0; padding-top: 56.25%; }
+.article-video { position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; margin: 38px 0; }
 .article-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 @media (max-width: 700px) {
@@ -94,19 +94,22 @@ footer div { display: flex; gap: 20px; }
   .site-header, main, footer { width: min(100% - 28px, 900px); }
   .site-header { padding-top: env(safe-area-inset-top); }
   .intro { grid-template-columns: 1fr; gap: 30px; padding-top: 42px; }
-  .intro img { width: min(42vw, 150px); }
+  .intro img { width: min(42vw, 150px); max-width: 100%; height: auto; aspect-ratio: 1 / 1; }
   .site-name { font-size: 14px; }
   h1 { font-size: clamp(36px, 11vw, 46px); }
   .intro-links a { display: inline-flex; min-height: 44px; align-items: center; }
   .education-list article { grid-template-columns: 92px 1fr; gap: 18px; }
-  .school-logo { height: 28px; }
+  .school-logo { width: auto; height: auto; max-height: 28px; }
   .ucla-logo { width: 76px; }
   footer { padding-bottom: env(safe-area-inset-bottom); }
   .article-header, .article-body { width: min(100% - 28px, 720px); }
   .article-header { padding-top: 46px; }
+  .article-header h1 { font-size: clamp(32px, 10vw, 42px); overflow-wrap: anywhere; }
   .article-header .back-link { margin-bottom: 30px; }
   .article-hero { margin-bottom: 36px; }
-  .article-body { font-size: 17px; }
+  .article-body { max-width: 100%; font-size: 17px; }
+  .article-body ul, .article-body ol { padding-left: 21px; }
+  .article-code { width: 100%; padding: 15px 16px; font-size: 12px; }
   .article-figure { margin-block: 30px; }
 }
 
