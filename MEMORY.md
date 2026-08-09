@@ -58,7 +58,7 @@ Do not invent employer names, job titles, dates, projects, metrics, or technical
 
 Five articles were migrated in full from Max's Medium feed on 2026-08-09. Their original publication dates, text, headings, links, captions, code, and images were preserved. A sixth article was published from a local Markdown draft on the same date. All 55 article images are hosted locally rather than hot-linked from external sites.
 
-- Open Weights Are Good for Business—and Awkward for the AI Labs
+- Open Weights Are Good for Business, but Awkward for the AI Labs
 - From Cyber Nation to AI Nation: Can Israel Reinvent Its Brand?
 - Building a Language Model From Scratch With Nothing But NumPy
 - Phishing Detector — Autonomous Agent via Claude 4 and MCP
