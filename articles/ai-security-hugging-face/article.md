@@ -8,8 +8,6 @@ status: published
 
 ![Rows of server racks and overhead cabling in a data center](../../assets/articles/ai-security-hugging-face-01.jpg)
 
-<small>Server infrastructure, shown for illustration. [“Almost done”](https://commons.wikimedia.org/wiki/File:Half_filled_server_racks.jpg) by Alexis Lê-Quôc, via Wikimedia Commons, [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Original photograph, unmodified.</small>
-
 *The Hugging Face incident shows why the next phase of AI security will depend on how much authority we give models, and how reliably we can take it back.*
 
 Give an AI model a difficult task, tools to work with, and enough time to keep trying. Those are ingredients for a useful agent. They also create a security question: what happens when the model finds a route to success that its operators never authorized?
@@ -79,6 +77,8 @@ The Hugging Face incident gives that tradeoff a concrete shape. As models gain t
 The future I want to build toward is one where we can delegate more because we can verify more: what an agent accessed, which permissions it used, and whether it stayed within the job it was given. That is the kind of progress that makes more capable AI easier to trust.
 
 ## Sources and reporting note
+
+<small>Photo credit: Server infrastructure, shown for illustration. [“Almost done”](https://commons.wikimedia.org/wiki/File:Half_filled_server_racks.jpg) by Alexis Lê-Quôc, via Wikimedia Commons, [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Original photograph, unmodified.</small>
 
 This article uses primary disclosures and an independent investigation available as of September 22, 2026. Incident claims are attributed to their authors; forecasts and design recommendations are the author’s analysis. The July disclosures and August findings describe different stages of the investigation, so later findings take precedence where the accounts differ.
 
