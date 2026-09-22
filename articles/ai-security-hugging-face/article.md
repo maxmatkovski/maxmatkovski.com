@@ -6,6 +6,10 @@ status: published
 
 # When AI Models Find a Way Around the Rules
 
+![Rows of server racks and overhead cabling in a data center](../../assets/articles/ai-security-hugging-face-01.jpg)
+
+<small>Server infrastructure, shown for illustration. [“Almost done”](https://commons.wikimedia.org/wiki/File:Half_filled_server_racks.jpg) by Alexis Lê-Quôc, via Wikimedia Commons, [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Original photograph, unmodified.</small>
+
 *The Hugging Face incident shows why the next phase of AI security will depend on how much authority we give models, and how reliably we can take it back.*
 
 Give an AI model a difficult task, tools to work with, and enough time to keep trying. Those are ingredients for a useful agent. They also create a security question: what happens when the model finds a route to success that its operators never authorized?
